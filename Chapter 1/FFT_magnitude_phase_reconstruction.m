@@ -28,6 +28,6 @@ subplot(2,2,3); plot(f,phase); %phase vs frequencies
 title('Phase spectrum');
  
 x_recon = N*ifft(ifftshift(X),N); %reconstructed signal
-t = [0:1:length(x_recon)-1]/fs; %recompute time index
+t = (0:1:length(x_recon)-1)/fs; %recompute time index
 subplot(2,2,4); plot(t,x_recon);%reconstructed signal
 title('Reconstructed')
